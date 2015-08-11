@@ -1,5 +1,5 @@
 var expectSubscriberNames = function(expectedNames, key) {
-  element.all(by.repeater(key + ' in subscribers').column(key + '.name')).then(function(arr) {
+  element.all(by.repeater(key + ' in subscribers').column(key + '.firstname')).then(function(arr) {
     arr.forEach(function(wd, i) {
       expect(wd.getText()).toMatch(expectedNames[i]);
     });
