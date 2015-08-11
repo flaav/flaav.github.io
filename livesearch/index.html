@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Example - example-example98-production</title>
+
+
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+<script src="protractor.js"></script>
+
+
+</head>
+
+<body ng-app="">
+  <div ng-init="subscribers = [{name:'John', phone:'555-1276'},
+                         {name:'Mary', phone:'800-BIG-MARY'},
+                         {name:'Flavius', phone:'0753 051 456'},
+                         {name:'Mike', phone:'555-4321'},
+                         {name:'Adam', phone:'555-5678'},
+                         {name:'Julie', phone:'555-8765'},
+                         {name:'Juliette', phone:'555-5678'}]"></div>
+
+  <label>Search:
+    <input ng-model="searchText">
+  </label>
+  <table id="searchTextResults">
+    <tr>
+      <th>Name</th>
+      <th>Phone</th>
+    </tr>
+    <tr ng-repeat="subscriber in subscribers | filter:searchText">
+      <td>{{subscriber.name}}</td>
+      <td>{{subscriber.phone}}</td>
+    </tr>
+  </table>
+
+</body>
+
+</html>
