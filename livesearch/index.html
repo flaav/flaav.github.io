@@ -13,13 +13,11 @@
 </head>
 
 <body ng-app="">
-  <div ng-init="subscribers = [{firstname:'John', phone:'555-1276'},
-                         {firstname:'Mary', phone:'800-BIG-MARY'},
-                         {firstname:'Flavius', phone:'0753 051 456'},
-                         {firstname:'Mike', phone:'555-4321'},
-                         {firstname:'Adam', phone:'555-5678'},
-                         {firstname:'Julie', phone:'555-8765'},
-                         {firstname:'Juliette', phone:'555-5678'}]"></div>
+  <div ng-init="subscribers = [
+{firstname:'John', lastname:'John', email:'John', phone:'555-1276', company:'Doe International', position:'founder'},
+{firstname:'John', lastname:'John', email:'John', phone:'555-1276', company:'Doe International', position:'founder'},
+{firstname:'Flavius', phone:'0753 051 456'}
+  ]"></div>
 
   <label>Search:
     <input ng-model="searchText">
