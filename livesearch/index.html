@@ -30,7 +30,11 @@
     </tr>
     <tr ng-repeat="subscriber in subscribers | filter:searchText">
       <td>{{subscriber.firstname}}</td>
+      <td>{{subscriber.lastname}}</td>
+      <td>{{subscriber.email}}</td>
       <td>{{subscriber.phone}}</td>
+      <td>{{subscriber.company}}</td>
+      <td>{{subscriber.position}}</td>
     </tr>
   </table>
 
