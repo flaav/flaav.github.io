@@ -1,7 +1,11 @@
 angular.module('myApp', [])
-.directive('myDirective', function(){
+
+.directive('elementDirective', function($log){
     return{
       restrict:'E',
-      templateUrl: 'templates/home.html'
+      templateUrl: '<p>The template</p>',
+      link: function(scope, el, attrs){
+          $log.log(attrs.someAttr);
+      }
     };
 });
