@@ -5,6 +5,7 @@ angular.module('myApp', [])
       restrict:'E',
       template: '<p>The template</p>',
       link: function(scope, el, attrs){
+          $log.log(el.html());
           $log.log(attrs.someAttr);
       }
     };
