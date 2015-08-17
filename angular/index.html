@@ -9,8 +9,12 @@
 
 </head>
 
-<body ng-app="myApp">
-<h1>test</h1>
+<body>
+  <div ng="myApp"  >
+    <script type="text/ng-template" id="templates/home.html" >
+      <div ng-reapeat="num in [1,2,3,4,5]" > {{ num }} </div>
+    </script>
+    <my-directive></my-directive>
+  </div> <!-- end div ng=myApp -->
 </body>
-
 </html>
