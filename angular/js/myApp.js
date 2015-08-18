@@ -26,7 +26,7 @@ angular.module('myApp', [])
            scope.heading= '';
            
            //set event listener and handler
-           $document.on('mouseover', function(event){
+           $document.on('mousemove', function(event){
                //mouseover event does not start $digest
                scope.$apply(function(){
                   if(event.pageY < 300){
