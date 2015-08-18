@@ -27,6 +27,9 @@ angular.module('myApp', [])
                   }else{
                       scope.heading += 'E';
                   }
+                  if(event.pageX > 300 && event.pageY > 300){
+                     scope.heading = 'Center';
+                  }
                });
            });
        }
