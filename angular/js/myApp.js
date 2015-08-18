@@ -1,11 +1,12 @@
 angular.module('myApp', [])
 
-.directive('elementDirective', function($log){
+.directive('attributeDirective', function($log){
     return{
-      restrict:'E',
-      template: '<p>Za template</p>',
+      restrict:'A',
+      template: '<p>An attribute directive</p>',
       link: function(scope, el, attrs){
           $log.log(el.html());
+          $log.log(attrs.attributeDirective);
           $log.log(attrs.someAttr);
       }
     };
