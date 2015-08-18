@@ -1,35 +1,16 @@
 angular.module('myApp', [])
 
-.directive('vectorText', function($document){
+.controller('MainCtrl', function($log, $scope){
+      $scope.outerval = 'mydata';
+      $scope.func = function (){
+         $log.log('invoked!');
+      }
+})
+.directive('iso', function (){
    return{
-       template: '<span>{{ heading }}</span>',
-       link: function(scope, el, attrs){
-           //init the css
-           el.css({
-               'float': 'left',
-               'padding': attrs.buffers+"px",
-               'border' : '1px solid black'
-           });
-           
-           //init scope variable
-           scope.heading= '';
-           
-           //set event listener and handler
-           $("#container").on('mousemove', function(event){
-               //mouseover event does not start $digest
-               scope.$apply(function(){
-                  if(event.pageY < 300){
-                      scope.heading = 'N';
-                  } else{
-                      scope.heading = 'S';
-                  }
-                  if(event.pageX < 300 ){
-                      scope.heading += 'W';
-                  }else{
-                      scope.heading += 'E';
-                  }
-               });
-           });
-       }
-   }; 
+      template: 'Inner: {{ innerval }}'
+      scope: {
+         innerval: '=myattr'
+      }
+   };
 });
