@@ -15,7 +15,7 @@ angular.module('myApp', [])
            scope.heading= '';
            
            //set event listener and handler
-           $document.on('mousemove', function(event){
+           $("#container").on('mousemove', function(event){
                //mouseover event does not start $digest
                scope.$apply(function(){
                   if(event.pageY < 300){
@@ -27,9 +27,6 @@ angular.module('myApp', [])
                       scope.heading += 'W';
                   }else{
                       scope.heading += 'E';
-                  }
-                  if(event.pageX > 300 || event.pageY > 300){
-                     scope.heading = 'Center';
                   }
                });
            });
