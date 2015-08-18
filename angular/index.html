@@ -1,22 +1,21 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <title>Angular</title>
- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
-<script src="js/myApp.js"></script>
-<style type="text/css" >
-  #container{background-color:#1a1a1a;position:absolute;width:40%;height:30%;left:30%;top:40%;}
-</style>
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
 </head>
+<body ng-app="egghead" ng-controller="AppCtrl as app">
 
-<body ng-app="myApp" >
-    
-    <div ng-controller="MainCtrl"  >
-        <div>Outer: {{ outerval  }}</div>
-        <div iso myattr="{{ outerval }}"></div>
-    </div>
-    
+<div my-first-directive="" message="Mom!"></div>
+<div my-first-directive="" message="Dad!"></div>
+<div my-first-directive="" message="Superman!"></div>
+<div my-first-directive="" message="John!"></div>
+<div my-first-directive="" message="Mom!"></div>
+<div my-first-directive="" message="Mom!"></div>
+<div my-first-directive="" message="Mom!"></div>
+<div my-first-directive="" message="Mom!"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+<script src="egghead.js"></script>
 </body>
 </html>
