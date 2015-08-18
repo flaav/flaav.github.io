@@ -14,7 +14,8 @@
 <body ng-app="myApp" >
     
     <div ng-controller="MainCtrl"  >
-        <div iso></div>
+        <div>Outer: {{ outerval  }}</div>
+        <div iso myattr="{{ outerval }}"></div>
     </div>
     
 </body>
