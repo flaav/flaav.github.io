@@ -1,16 +1,13 @@
-angular.module('myApp', [])
+var egghead = angular.module("egghead", []);
 
-.controller('MainCtrl', function($log, $scope){
-      $scope.outerval = 'mydata';
-      $scope.func = function (){
-         $log.log('invoked!');
-      }
+egghead.controller("AppCtrl", function () {
+    var app = this;
+
+    app.message = "Hello";
 })
-.directive('iso', function (){
-   return{
-      template: 'Inner: {{ outerval }}'
-      scope: {
-         outerval: '=myattr'
-      }
-   };
-});
+
+egghead.directive("myFirstDirective", function () {
+    return function (scope, element, attrs) {
+        element.text(scope.app.message + " " + attrs.message);
+    }
+})
