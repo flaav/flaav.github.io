@@ -10,7 +10,7 @@ angular.module('myApp', [])
    return{
       template: 'Inner: {{ innerval }}'
       scope: {
-         innerval: '=myattr'
+         outerval: '=myattr'
       }
    };
 });
