@@ -7,7 +7,8 @@ angular.module('myApp', [])
            //init the css
            el.css({
                'float': 'left',
-               'padding': attrs.buffers+"px"
+               'padding': attrs.buffers+"px",
+               'border' : '1px solid black'
            });
            
            //init scope variable
