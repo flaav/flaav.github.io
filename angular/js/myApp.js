@@ -8,7 +8,7 @@ angular.module('myApp', [])
 })
 .directive('iso', function (){
    return{
-      template: 'Inner: {{ innerval }}'
+      template: 'Inner: {{ outerval }}'
       scope: {
          outerval: '=myattr'
       }
