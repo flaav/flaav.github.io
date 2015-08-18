@@ -5,10 +5,32 @@
   <meta charset="UTF-8">
   <title>Live Search with AngularJS</title>
 
-
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 <script src="js/script.js"></script>
-
+<style type="text/css" >
+	#searchTextResults{
+		display:none;
+	}
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var searchbar = $("#searchbar");
+		searchbar.keydown(function(){
+			$("#searchTextResults").show();
+		});
+		
+		searchbar.keyup(function(e){
+			var value=$.trim($("#searchbar").val());
+			if( searchbar.val() == ''){
+				//alert('Search bar is empty');
+				$("#searchTextResults").hide();
+			}
+		});
+		
+		
+	});
+</script>
 
 </head>
 
@@ -21,7 +43,7 @@
 ]"></div>
 
   <label>Search:
-    <input ng-model="searchText">
+    <input ng-model="searchText" id="searchbar" >
   </label>
   <table id="searchTextResults">
     <tr>
