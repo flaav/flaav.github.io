@@ -35,7 +35,7 @@
       <input ng-model="searchText" id="searchbar" />
           <!-- star cards -->
           <div class="ui three stackable cards users" >
-          	<div class="card" ng-repeat="user in users| filter:searchText" >
+          	<div ng-animate="'animate'" class="card" ng-repeat="user in users| filter:searchText" >
           		<div class="image">
 	                	<img src="{{user.image}}">
 	              </div>
