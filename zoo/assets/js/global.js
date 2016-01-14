@@ -1,7 +1,12 @@
 $(document).ready(function() { 
   var d = new Date();
   //alert(d);
-  
-   $('.ui.accordion').accordion();
-  
+
+   $('.accordion')
+	  .accordion({
+	    selector: {
+	      trigger: '.title'
+	    }
+	});
+
 });
