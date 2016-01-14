@@ -13,6 +13,10 @@ $(document).ready(function() {
 
 
 //angular
+'use strict';
+
+/* Controllers */
+
 var phonecatApp = angular.module('phonecatApp', []);
 
 phonecatApp.controller('PhoneListCtrl', function($scope) {
