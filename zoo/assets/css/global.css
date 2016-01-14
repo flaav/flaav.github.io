@@ -1,2 +1,5 @@
 /*stylesheet*/
 .row{ height:100%; overflow: hidden; display: block; }
+.single-column{
+  width:1100px;
+}
