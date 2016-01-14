@@ -15,7 +15,7 @@ $(document).ready(function() {
 //angular
 'use strict';
 
-/* Controllers */
+/* Controllers 
 
 var phonecatApp = angular.module('phonecatApp', []);
 
@@ -29,6 +29,8 @@ phonecatApp.controller('PhoneListCtrl', function($scope) {
      'snippet': 'The Next, Next Generation tablet.'}
   ];
 });
+
+*/
 
 //userscontroler
 var usersApp = angular.module('usersApp', []);
