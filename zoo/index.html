@@ -34,12 +34,17 @@
     <div class="column" ng-controller="UserListCtrl">
       Custom Row
           <!-- star cards -->
-        <ul class="users">
-	          <li ng-repeat="user in users">
-	            <span>{{user.name}}</span>
-	            <p>{{user.snippet}}</p>
-	          </li>
-        </ul>
+          <div class="ui six stackable cards users" >
+          	<div class="card" >
+          		<div class="image">
+	                	<img src="{{user.image}}">
+	              </div>
+	              <div class="content">
+			    <a class="header" href="#">{{user.name}}</a>
+			    <div class="meta"> {{user.snippet}} </div>
+			</div>
+          	</div>
+          </div>
           <!-- end cards -->
     </div>
   </div>
