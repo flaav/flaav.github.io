@@ -47,7 +47,7 @@
   </div>
  </div>
   
-  <div class="ui equal width center aligned padded grid" ng-app="usersApp" >
+  <div class="ui equal width center aligned padded grid"  >
   <div class="row">
     <div class="olive column">
       Olive
@@ -56,41 +56,16 @@
       Black
     </div>
   </div>
-  <div class="row" style="background-color: #f0f1f2;color: #000;"  >
+  <div class="row" style="background-color: #f0f1f2;color: #000;" ng-app="usersApp"  >
     <div class="column" ng-controller="usersCtrl">
       Custom Row
           <!-- star cards -->
-          <div class="ui six stackable cards users">
-            <div class="card">
-              <div class="image">
-                <img src="https://scontent-fra3-1.xx.fbcdn.net/hphotos-xpt1/v/t1.0-9/1619471_914918641896194_7471779277846458207_n.jpg?oh=091ba7261910f0a31d8ff48a12570a12&oe=57078563">
-        	<div class="content">
-		    <a class="header" href="#">Flavius</a>
-		    <div class="meta">
-		      <a>Last Seen 2 days ago</a>
-		    </div>
-		  </div> 
-              </div>
-            </div>
-            <div class="card">
-              <div class="image">
-                <img src="https://scontent-fra3-1.xx.fbcdn.net/hprofile-xfa1/v/t1.0-1/c41.0.160.160/p160x160/197507_195470230473680_1989223_n.jpg?oh=4d9e9fe52211ad1f3f9df2f56a67fbf2&oe=56FF162E">
-              	<div class="content">
-		    <a class="header" href="#">Silviu</a>
-		    <div class="meta">
-		      <a>Last Seen 2 days ago</a>
-		    </div>
-		  </div> 
-              </div>
-            </div>
-            <div class="card" ng-repeat="user in users" >
-            	<div class="image" > <img src="{{user.image}}" /></div>
-            	<div>
-            		<a class="header" href="#"> {{user.name}}</a>
-            		<div class="meta" >{{phone.snippet}}</div>
-            	</div>
-            </div>
-          </div>
+        <ul class="phones">
+	          <li ng-repeat="user in users">
+	            <span>{{user.name}}</span>
+	            <p>{{user.snippet}}</p>
+	          </li>
+        </ul>
           <!-- end cards -->
     </div>
   </div>
