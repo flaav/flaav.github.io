@@ -1,4 +1,4 @@
-<html lang="en" ng-app="phonecatApp">
+<html lang="en" >
 <head>
 	 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Mr. R0b0t</title>
@@ -20,10 +20,11 @@
 	<script src="assets/js/global.js" ></script>
 </head>
 
-<body ng-controller="PhoneListCtrl">
+<body >
   <h1>Hello, Mr. Robot.</h1>
 
-  <div class="container-fluid">
+<div ng-app="phonecatApp" > 
+  <div class="container-fluid" ng-controller="PhoneListCtrl"  >
     <div class="row">
       <div class="col-md-2">
         <!--Sidebar content-->
@@ -44,8 +45,9 @@
       </div>
     </div>
   </div>
+ </div>
   
-  <div class="ui equal width center aligned padded grid">
+  <div class="ui equal width center aligned padded grid" ng-app="usersApp" >
   <div class="row">
     <div class="olive column">
       Olive
@@ -54,8 +56,8 @@
       Black
     </div>
   </div>
-  <div class="row" style="background-color: #f0f1f2;color: #000;">
-    <div class="column">
+  <div class="row" style="background-color: #f0f1f2;color: #000;"  >
+    <div class="column" ng-controller="usersCtrl">
       Custom Row
           <!-- star cards -->
           <div class="ui six stackable cards">
@@ -81,25 +83,12 @@
 		  </div> 
               </div>
             </div>
-            <div class="card">
-              <div class="image">
-                <img src="https://scontent-fra3-1.xx.fbcdn.net/hphotos-xpt1/v/t1.0-9/1619471_914918641896194_7471779277846458207_n.jpg?oh=091ba7261910f0a31d8ff48a12570a12&oe=57078563">
-              </div>
-            </div>
-            <div class="card">
-              <div class="image">
-                <img src="https://scontent-fra3-1.xx.fbcdn.net/hphotos-xpt1/v/t1.0-9/1619471_914918641896194_7471779277846458207_n.jpg?oh=091ba7261910f0a31d8ff48a12570a12&oe=57078563">
-              </div>
-            </div>
-            <div class="card">
-              <div class="image">
-                <img src="https://scontent-fra3-1.xx.fbcdn.net/hphotos-xpt1/v/t1.0-9/1619471_914918641896194_7471779277846458207_n.jpg?oh=091ba7261910f0a31d8ff48a12570a12&oe=57078563">
-              </div>
-            </div>
-            <div class="card">
-              <div class="image">
-                <img src="https://scontent-fra3-1.xx.fbcdn.net/hphotos-xpt1/v/t1.0-9/1619471_914918641896194_7471779277846458207_n.jpg?oh=091ba7261910f0a31d8ff48a12570a12&oe=57078563">
-              </div>
+            <div class="card" ng-repeat="user in users | filter:query" >
+            	<div class="image" > <img src="{{user.image}}" /></div>
+            	<div>
+            		<a class="header" href="#"> {{user.name}}</a>
+            		<div class="meta" >{{phone.snippet}}</div>
+            	</div>
             </div>
           </div>
           <!-- end cards -->
