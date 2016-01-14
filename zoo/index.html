@@ -1,4 +1,4 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" ng-app="phonecatApp">
 <head>
 	 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Mr. R0b0t</title>
@@ -19,7 +19,7 @@
 	<script src="assets/js/global.js" ></script>
 </head>
 
-<body>
+<body ng-controller="PhoneListCtrl">
   <h1>Hello, Mr. Robot.</h1>
   <div class="ui styled accordion">
   <div class="title active">
@@ -115,6 +115,28 @@
     </div>
   </div>
 </div>
+  
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-2">
+        <!--Sidebar content-->
+
+        Search: <input ng-model="query">
+
+      </div>
+      <div class="col-md-10">
+        <!--Body content-->
+
+        <ul class="phones">
+          <li ng-repeat="phone in phones | filter:query">
+            <span>{{phone.name}}</span>
+            <p>{{phone.snippet}}</p>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
   
 </body>
 </html>
