@@ -32,10 +32,10 @@
   </div>
   <div class="row" style="background-color: #f0f1f2;color: #000;" ng-app="usersApp"  >
     <div class="column" ng-controller="UserListCtrl">
-      Custom Row
+      <input ng-model="searchText" id="searchbar" />
           <!-- star cards -->
           <div class="ui six stackable cards users" >
-          	<div class="card" ng-repeat="user in users" >
+          	<div class="card" ng-repeat="user in users| filter:searchText" >
           		<div class="image">
 	                	<img src="{{user.image}}">
 	              </div>
