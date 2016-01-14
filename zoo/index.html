@@ -23,30 +23,6 @@
 <body >
   <h1>Hello, Mr. Robot.</h1>
 
-<div ng-app="phonecatApp" > 
-  <div class="container-fluid" ng-controller="PhoneListCtrl"  >
-    <div class="row">
-      <div class="col-md-2">
-        <!--Sidebar content-->
-
-        Search: <input ng-model="query">
-
-      </div>
-      <div class="col-md-10">
-        <!--Body content-->
-
-        <ul class="phones">
-          <li ng-repeat="phone in phones | filter:query">
-            <span>{{phone.name}}</span>
-            <p>{{phone.snippet}}</p>
-          </li>
-        </ul>
-
-      </div>
-    </div>
-  </div>
- </div>
-  
   <div class="ui equal width center aligned padded grid"  >
   <div class="row">
     <div class="olive column">
