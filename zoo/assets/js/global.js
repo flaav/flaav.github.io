@@ -33,7 +33,7 @@ phonecatApp.controller('PhoneListCtrl', function($scope) {
 //userscontroler
 var usersApp = angular.module('usersApp', []);
 
-usersApp.controller('usersCtrl', function($scope) {
+usersApp.controller('UserListCtrl', function($scope) {
   $scope.users = [
     {'name': 'Flavius',
      'image': 'https://scontent-fra3-1.xx.fbcdn.net/hphotos-xpt1/v/t1.0-9/1619471_914918641896194_7471779277846458207_n.jpg?oh=091ba7261910f0a31d8ff48a12570a12&oe=57078563',
